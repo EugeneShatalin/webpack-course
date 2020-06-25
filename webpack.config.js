@@ -1,5 +1,8 @@
 const path = require('path') //встроенный модуль node.js, который позволяет работать с путями
 const HTMLPlugin = require('html-webpack-plugin') //подключение плагина для создания html файлов
+const MiniCssExtractPlugin = require('mini-css-extract-plugin') //подключение плагина для создания css файлов
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin') //оптимизатор css файлов
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin') //оптимизатор js файлов
 
 /*
 данный файл запускаеться на платформе node.js
@@ -18,17 +21,26 @@ module.exports = {
             //__dirname - параметр указывающий на текущию папку
         //'dist' - второй параметр который в текущей папке указывает конечную папку для файлов проекта
     },
+    optimization: {
+        minimizer: [
+            new OptimizeCssAssetsPlugin({}) //минимайзер css
+            // new UglifyJsPlugin({}) //минимайзер js
+        ]
+    },
     plugins: [ //масссив для подключения плагинов
         new HTMLPlugin({
             filename: "index.html", //название получаемого файла
             template: "./src/index.html" //шаблон файла на основе которого будет создан рабочий файл
+        }),
+        new MiniCssExtractPlugin({
+            filename: "style.css"
         })
     ],
     module: {
         rules: [
             {
-                test: /\.css$/,
-                use: ['style-loader', 'css-loader'],
+                test: /\.css$/, //формат файла для стилей
+                use: [MiniCssExtractPlugin.loader, 'css-loader'], //обработка и загрузка стилей
             },
         ],
     },

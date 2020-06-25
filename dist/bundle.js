@@ -90,10 +90,46 @@
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_app_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/app.service */ \"./src/modules/app.service.js\");\n/* harmony import */ var _modules_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/config */ \"./src/modules/config.js\");\n/* harmony import */ var _modules_header_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/header.component */ \"./src/modules/header.component.js\");\n/* harmony import */ var _modules_header_component__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_header_component__WEBPACK_IMPORTED_MODULE_2__);\n\r\n //импортируем объект config при помощи деструктуризации\r\n\r\n\r\nconsole.log('Config key: ', _modules_config__WEBPACK_IMPORTED_MODULE_1__[\"config\"].key)\r\n\r\nconst service = new _modules_app_service__WEBPACK_IMPORTED_MODULE_0__[\"default\"]('Hello world!')\r\nservice.log()\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/app.service.js":
+/*!************************************!*\
+  !*** ./src/modules/app.service.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return AppService; });\nclass AppService {\r\n    constructor(text) {\r\n        this.text = text\r\n    }\r\n\r\n    log() {\r\n        console.log('[App service]:', this.text)\r\n    }\r\n}\n\n//# sourceURL=webpack:///./src/modules/app.service.js?");
+
+/***/ }),
+
+/***/ "./src/modules/config.js":
+/*!*******************************!*\
+  !*** ./src/modules/config.js ***!
+  \*******************************/
+/*! exports provided: config */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"config\", function() { return config; });\nconst config = { //экспортируем во внешнии файлы содежимое, при таком виде экспорта в самом\r\n                        // экспорте будет хнаниться объект\r\n    key: 123456\r\n}\n\n//# sourceURL=webpack:///./src/modules/config.js?");
+
+/***/ }),
+
+/***/ "./src/modules/header.component.js":
+/*!*****************************************!*\
+  !*** ./src/modules/header.component.js ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("console.log('Hello world!')\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("console.log('Header componentnpm ')\n\n//# sourceURL=webpack:///./src/modules/header.component.js?");
 
 /***/ })
 

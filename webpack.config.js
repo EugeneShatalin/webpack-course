@@ -27,6 +27,10 @@ module.exports = {
             // new UglifyJsPlugin({}) //минимайзер js
         ]
     },
+    devServer: {
+        contentBase: path.resolve(__dirname, 'dist'),
+        port: 4200
+    },
     plugins: [ //масссив для подключения плагинов
         new HTMLPlugin({
             filename: "index.html", //название получаемого файла

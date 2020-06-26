@@ -23,8 +23,8 @@ module.exports = {
     },
     optimization: {
         minimizer: [
-            new OptimizeCssAssetsPlugin({}) //минимайзер css
-            // new UglifyJsPlugin({}) //минимайзер js
+            new OptimizeCssAssetsPlugin({}), //минимайзер css
+            new UglifyJsPlugin({}) //минимайзер js
         ]
     },
     devServer: {
@@ -45,6 +45,11 @@ module.exports = {
             {
                 test: /\.css$/, //формат файла для стилей
                 use: [MiniCssExtractPlugin.loader, 'css-loader'], //обработка и загрузка стилей
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: "babel-loader"
             },
         ],
     },

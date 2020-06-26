@@ -47,6 +47,10 @@ module.exports = {
                 use: [MiniCssExtractPlugin.loader, 'css-loader'], //обработка и загрузка стилей
             },
             {
+                test: /\.less$/, //формат файла для стилей
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader'], //обработка и загрузка стилей
+            },
+            {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 loader: "babel-loader"

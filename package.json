@@ -27,7 +27,9 @@
   "devDependencies": {
     "@babel/cli": "^7.10.3",
     "@babel/core": "^7.10.3",
+    "@babel/plugin-transform-react-jsx-compat": "^7.10.1",
     "@babel/preset-env": "^7.10.3",
+    "@babel/preset-react": "^7.10.1",
     "babel-loader": "^8.1.0",
     "css-loader": "^3.6.0",
     "html-webpack-plugin": "^4.3.0",
@@ -45,6 +47,8 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.10.1",
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }

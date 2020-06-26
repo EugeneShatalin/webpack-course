@@ -14,7 +14,8 @@ export default class App extends React.Component {
     }
 
     render() {
-        return  <React.Fragment>
+        return  (
+            <React.Fragment>
             <header />
             <hr />
             <div
@@ -25,6 +26,7 @@ export default class App extends React.Component {
                             earum facere fugit ipsum libero minima non quam.</p>
                         </div>
         </React.Fragment>
+    )
 
     }
     }
